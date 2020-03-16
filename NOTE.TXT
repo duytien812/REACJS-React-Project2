@@ -1,0 +1,25 @@
+﻿REACTJS-React-Project2
+
+0. THÔNG TIN
+- Quản Lý Công Việc
+- Dựng CRUD cơ bản: dựa trên LocalStorage & SessionStorage
+- Xuất bản: 01-10-2017
+- https://www.youtube.com/watch?v=494HPoUmqdI&list=PLJ5qtRQovuEOoKffoCBzTfvzMTTORnoyp&index=16
+
+1. DANH SÁCH BÀI HỌC
+16-30:
+16. Project 2 : Quản Lý Công Việc - Giới Thiệu Dự Án ( To do lists for task management )
+17. Project 2 : Template & Phân Chia Component
+18. Project 2 : Hiển Thị Danh Sách Công Việc
+19. Project 2 : Đóng Mở Form Add - Edit
+20. Project 2 : Chức Năng Thêm Mới P1
+21. Project 2 : Chức Năng Thêm Mới P2
+22. Project 2 : Cập Nhật Status
+23. Project 2 : Chức Năng Xóa
+24. Project 2 : Chức Năng Cập Nhật P1
+25. Project 2 : Chức Năng Cập Nhật P2
+26. Project 2 : Lọc Dữ Liệu Trên Table
+27. Project 2 : Chức Năng Tìm Kiếm
+28. Project 2 : Chức Năng Sắp Xếp
+29. Project 2 : Sử Dụng Thư Viện Third-Party
+30. Hoàn Thiện Và Publish Ứng Dụng Lên Host ( Build & deploy a ReactJS with free hosting )
