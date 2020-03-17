@@ -10,7 +10,7 @@
 16-30:
 16. Project 2 : Quản Lý Công Việc - Giới Thiệu Dự Án ( To do lists for task management )
 17. Project 2 : Template & Phân Chia Component
-18. Project 2 : Hiển Thị Danh Sách Công Việc
+18. Project 2 : Hiển Thị Danh Sách Công Việc (lưu trữ danh sách trên LocalStorage & SessionStorage)
 19. Project 2 : Đóng Mở Form Add - Edit
 20. Project 2 : Chức Năng Thêm Mới P1
 21. Project 2 : Chức Năng Thêm Mới P2
