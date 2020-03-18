@@ -10,7 +10,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			tasks : [],  //id: unique, name, status
-			isDisplayForm : false
+			isDisplayForm : true
 		}
 	}
 
@@ -69,9 +69,21 @@ class App extends Component {
 		});
 	}
 
+	onSubmit = (data) => {
+		var { tasks } = this.state;
+		data.id = this.generateID();
+		tasks.push(data);
+		this.setState({
+			tasks: tasks
+		});
+		localStorage.setItem('tasks', JSON.stringify(tasks));
+	}
+
 	render() {
 		var { tasks, isDisplayForm } = this.state;  // var tasks = this.state.tasks
-		var elmTaskForm = isDisplayForm ? <TaskForm onCloseForm={this.onCloseForm} /> : '';
+		var elmTaskForm = isDisplayForm
+		? <TaskForm onCloseForm={this.onCloseForm} onSubmit={this.onSubmit} />
+		: '';
 
 		return (
 			<div className="container">
