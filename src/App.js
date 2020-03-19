@@ -14,7 +14,7 @@ class App extends Component {
 		}
 	}
 
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		if(localStorage && localStorage.getItem('tasks')) {
 			var tasks = JSON.parse(localStorage.getItem('tasks'));
 			this.setState({
@@ -23,29 +23,6 @@ class App extends Component {
 		}
 	}
 
-	onGenerateData = () => {
-		var tasks = [
-			{
-				id: this.generateID(),
-				name: 'Học lập trình',
-				status: true
-			},
-			{
-				id: this.generateID(),
-				name: 'Đi bơi',
-				status: true
-			},
-			{
-				id: this.generateID(),
-				name: 'Ngủ',
-				status: true
-			},
-		];
-		this.setState({
-			tasks : tasks,
-		});
-		localStorage.setItem('tasks', JSON.stringify(tasks));
-	}
 
 	// Generate id
 	s4() {
@@ -103,13 +80,6 @@ class App extends Component {
 							onClick={ this.onToggleForm }
 						>
 							<span className="fa fa-plus mr-5"></span>Thêm Công Việc
-						</button>
-						<button
-							type="button"
-							className="btn btn-danger ml-5"
-							onClick={ this.onGenerateData }
-						>
-							Generate Data
 						</button>
 						{/*Search - Sort*/}
 						<Control />

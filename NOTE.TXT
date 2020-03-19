@@ -13,7 +13,8 @@
 18. Project 2 : Hiển Thị Danh Sách Công Việc (lưu trữ danh sách trên LocalStorage & SessionStorage)
 19. Project 2 : Đóng Mở Form Add - Edit (truyền sự kiện onclick từ con sang cha (TaskForm.js -> App.js))
 20. Project 2 : Chức Năng Thêm Mới P1
-21. Project 2 : Chức Năng Thêm Mới P2
+21. Project 2 : Chức Năng Thêm Mới P2 (Clear form sau khi submit, xóa button Generate data)
+		- Fix lỗi componentWillMount() không còn được sử dụng, thay bằng UNSAFE_componentWillMount().
 22. Project 2 : Cập Nhật Status
 23. Project 2 : Chức Năng Xóa
 24. Project 2 : Chức Năng Cập Nhật P1
