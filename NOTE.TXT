@@ -28,6 +28,9 @@
 	- Sửa -> lưu lại -> Thêm Công việc -> vẫn còn data sửa trong Form -> cần xóa đi:
 	  + Sau khi xét giá trị lưu tạm khi sửa, cần xóa đi (taskEditing: null)
 25. Project 2 : Chức Năng Cập Nhật P2
+	- Khi Form đã mở lên rồi -> click button sửa -> thông tin vẫn k được cập nhật:
+	  + Cập nhật bằng UNSAFE_componentWillReceiveProps(nextProps) và truyền lại giá trị cho state
+	- Click vào sửa -> Thêm (đóng form) -> Thêm (mở form) -> vẫn còn thông tin sửa (cần chuyển sang thêm và form trắng)
 26. Project 2 : Lọc Dữ Liệu Trên Table
 27. Project 2 : Chức Năng Tìm Kiếm
 28. Project 2 : Chức Năng Sắp Xếp
