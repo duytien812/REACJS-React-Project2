@@ -18,6 +18,15 @@
 22. Project 2 : Cập Nhật Status
 23. Project 2 : Chức Năng Xóa
 24. Project 2 : Chức Năng Cập Nhật P1
+	- Truyền id từ cháu sang ông -> tìm kiếm và lấy ra đối tượng cần sửa
+	- Truyền đối tượng cần sửa sang Form -> truyền vào State thông qua UNSAFE_componentWillMount() 
+	- Sử dụng chung Form thêm và sửa, và phân biệt nhau bằng ID (trường hợp thêm ID sẽ rỗng)
+	- Sửa -> lưu lại -> tự thêm. Cần fix:
+	  + Dựa vào id trong data truyền lên để phân biệt ra trường hợp sửa và thêm 
+	  + id === '' (TH thêm): push data vào mảng object tasks ban đầu
+	  + id !== '' (TH sửa): dựa vào id -> tìm ra index -> thay thế giá trị phần tử tại vị trí index (tasks[index] = data)
+	- Sửa -> lưu lại -> Thêm Công việc -> vẫn còn data sửa trong Form -> cần xóa đi:
+	  + Sau khi xét giá trị lưu tạm khi sửa, cần xóa đi (taskEditing: null)
 25. Project 2 : Chức Năng Cập Nhật P2
 26. Project 2 : Lọc Dữ Liệu Trên Table
 27. Project 2 : Chức Năng Tìm Kiếm

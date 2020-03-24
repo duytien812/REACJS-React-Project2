@@ -5,6 +5,7 @@ class TaskForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: '',
             name: '',
             status: false
         };
@@ -26,7 +27,7 @@ class TaskForm extends Component {
         });
     }
 
-    onSubmit = (event) => {
+    onSubmit = () => {
         this.props.onSubmit(this.state);
         //Cancel & Close Form
         this.onClear();
@@ -40,12 +41,26 @@ class TaskForm extends Component {
         });
     }
 
+    UNSAFE_componentWillMount() {
+        if(this.props.task){
+            this.setState({
+                id: this.props.task.id,
+                name: this.props.task.name,
+                status: this.props.task.status,
+            });
+            console.log(this.state);
+        }
+    }
+
 	render() {
+
+        var { id } = this.state;
+
 		return (
 			<div className="panel panel-warning">
                 <div className="panel-heading">
                     <h3 className="panel-title text-left">
-                        Thêm Công Việc
+                        {id === '' ? 'Thêm Công Việc' : 'Cập nhật công việc'}
                         <span
                             className="fa fa-times-circle text-right"
                             onClick={ this.onCloseForm }
@@ -76,7 +91,7 @@ class TaskForm extends Component {
                         </select>
                         <br/>
                         <div className="text-center">
-                            <button type="submit" className="btn btn-warning">Thêm</button>&nbsp;
+                            <button type="submit" className="btn btn-warning">Lưu lại</button>&nbsp;
                             <button
                                 type="button"
                                 className="btn btn-danger"
