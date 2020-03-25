@@ -32,6 +32,9 @@
 	  + Cập nhật bằng UNSAFE_componentWillReceiveProps(nextProps) và truyền lại giá trị cho state
 	- Click vào sửa -> Thêm (đóng form) -> Thêm (mở form) -> vẫn còn thông tin sửa (cần chuyển sang thêm và form trắng)
 26. Project 2 : Lọc Dữ Liệu Trên Table
+	- Lọc luôn dữ liệu khi gõ phím (sử dụng hàm filter)
+	- Khi nó nhận 1 sự thay đổi từ bàn phím người dùng, nó lập tức cập nhật lại danh sách
+	- Chức năng giống Data Table
 27. Project 2 : Chức Năng Tìm Kiếm
 28. Project 2 : Chức Năng Sắp Xếp
 29. Project 2 : Sử Dụng Thư Viện Third-Party
