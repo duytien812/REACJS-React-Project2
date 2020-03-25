@@ -35,7 +35,7 @@
 	- Lọc luôn dữ liệu khi gõ phím (sử dụng hàm filter)
 	- Khi nó nhận 1 sự thay đổi từ bàn phím người dùng, nó lập tức cập nhật lại danh sách
 	- Chức năng giống Data Table
-27. Project 2 : Chức Năng Tìm Kiếm
+27. Project 2 : Chức Năng Tìm Kiếm (sử dụng hàm filter)
 28. Project 2 : Chức Năng Sắp Xếp
 29. Project 2 : Sử Dụng Thư Viện Third-Party
 30. Hoàn Thiện Và Publish Ứng Dụng Lên Host ( Build & deploy a ReactJS with free hosting )

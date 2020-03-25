@@ -14,7 +14,8 @@ class App extends Component {
 			filter : {
 				name: '',
 				status: -1,
-			}
+			},
+			keyword: '',
 		}
 	}
 
@@ -136,8 +137,14 @@ class App extends Component {
 		});
 	}
 
+	onSearch = (keyword) => {
+		this.setState({
+			keyword: keyword
+		});
+	}
+
 	render() {
-		var { tasks, isDisplayForm, taskEditing, filter } = this.state;  // var tasks = this.state.tasks
+		var { tasks, isDisplayForm, taskEditing, filter, keyword } = this.state;  // var tasks = this.state.tasks
 
 		if(filter){
 			if(filter.name){
@@ -152,6 +159,11 @@ class App extends Component {
 					return task.status === (filter.status === 1 ? true : false)
 				}
 			});
+			if(keyword){
+				tasks = tasks.filter((task) => {
+					return task.name.toLowerCase().indexOf(keyword) !== -1;
+				});
+			}
 		}
 
 		var elmTaskForm = isDisplayForm
@@ -182,7 +194,7 @@ class App extends Component {
 							<span className="fa fa-plus mr-5"></span>Thêm Công Việc
 						</button>
 						{/*Search - Sort*/}
-						<Control />
+						<Control onSearch={ this.onSearch } />
 						{/*List*/}
 						<TaskList
 							tasks={ tasks }
