@@ -80,7 +80,7 @@ class TaskForm extends Component {
                         <span
                             className="fa fa-times-circle text-right"
                             onClick={ this.onCloseForm }
-                        >x</span>
+                        ></span>
                     </h3>
                 </div>
                 <div className="panel-body">
