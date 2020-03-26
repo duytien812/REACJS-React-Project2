@@ -40,5 +40,8 @@
 	- Đổi lại tên thư mục cho rõ ràng hơn, thuận tiện cho common sau này (Control -> TaskControl)
 	- Thêm Font Awesome để hiển thị các Icon
 28.2. Project 2 : Chức Năng Sắp Xếp
+	- Truyền dữ liệu ra để setState
+	- Truyền ngược lại để check hiển thị (có thể dùng UNSAFE_componentWillReceiveProps(nextProps))
+	- Lấy data từ tầng dưới để thực hiện sắp xếp (sort)
 29. Project 2 : Sử Dụng Thư Viện Third-Party
 30. Hoàn Thiện Và Publish Ứng Dụng Lên Host ( Build & deploy a ReactJS with free hosting )

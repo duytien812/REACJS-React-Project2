@@ -16,6 +16,8 @@ class App extends Component {
 				status: -1,
 			},
 			keyword: '',
+			sortBy: 'name',
+			sortValue: 1,
 		}
 	}
 
@@ -143,9 +145,25 @@ class App extends Component {
 		});
 	}
 
-	render() {
-		var { tasks, isDisplayForm, taskEditing, filter, keyword } = this.state;  // var tasks = this.state.tasks
+	onSort = (sortBy, sortValue) => {
+		this.setState({
+			sortBy: sortBy,
+			sortValue: sortValue
+		});
+	}
 
+	render() {
+		var {
+				tasks,
+				isDisplayForm,
+				taskEditing,
+				filter,
+				keyword,
+				sortBy,
+				sortValue
+			} = this.state;  // var tasks = this.state.tasks
+
+		//Thực hiện tìm kiếm
 		if(filter){
 			if(filter.name){
 				tasks = tasks.filter((task) => {
@@ -174,6 +192,21 @@ class App extends Component {
 		  />
 		: '';
 
+		//Thực hiện sắp xếp
+		if(sortBy === 'name'){
+			tasks.sort((a, b) => {
+				if(a.name > b.name) return sortValue;
+				else if(a.name < b.name) return -sortValue;
+				else return 0;
+			});
+		}else{
+			tasks.sort((a, b) => {
+				if(a.status > b.status) return -sortValue;
+				else if(a.status < b.status) return sortValue;
+				else return 0;
+			});
+		}
+
 		return (
 			<div className="container">
 				<div className="text-center">
@@ -194,7 +227,12 @@ class App extends Component {
 							<span className="fa fa-plus mr-5"></span>Thêm Công Việc
 						</button>
 						{/*Search - Sort*/}
-						<TaskControl onSearch={ this.onSearch } />
+						<TaskControl
+							onSearch={ this.onSearch }
+							onSort={ this.onSort }
+							sortBy={ sortBy }
+							sortValue={ sortValue }
+						/>
 						{/*List*/}
 						<TaskList
 							tasks={ tasks }
