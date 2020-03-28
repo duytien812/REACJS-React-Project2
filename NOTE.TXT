@@ -1,12 +1,26 @@
 ﻿REACTJS-React-Project2
 
-0. THÔNG TIN
+I. THÔNG TIN
 - Quản Lý Công Việc
 - Dựng CRUD cơ bản: dựa trên LocalStorage & SessionStorage
 - Xuất bản: 01-10-2017
 - https://www.youtube.com/watch?v=494HPoUmqdI&list=PLJ5qtRQovuEOoKffoCBzTfvzMTTORnoyp&index=16
 
-1. DANH SÁCH BÀI HỌC
+
+II. Tải project từ github.com về và chạy
+ - B1: Kiểm tra máy đã có nodejs chưa
+     + Mở cửa sổ cmd -> node -v  (có thể chạy ở bất cứ đâu để kiểm tra)
+     + Nếu chưa cài thì tải về và cài đặt bình thường:
+     + https://nodejs.org/en/
+ - B2: Tải modules về
+     + Mặc định git không tải lên các gói modules nên cần tải lại cho project
+     + Vào trong project -> Shift + chuột phải -> Open PowerShell Window Here
+     + npm install
+ - B3: Chạy Project
+     + npm start
+
+
+III. DANH SÁCH BÀI HỌC
 16-30:
 16. Project 2 : Quản Lý Công Việc - Giới Thiệu Dự Án ( To do lists for task management )
 17. Project 2 : Template & Phân Chia Component
